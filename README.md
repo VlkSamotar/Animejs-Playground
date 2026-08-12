@@ -1,7 +1,6 @@
 # Interaktivní laboratoř animací – Anime.js Playground
 
-Tento projekt slouží jako praktickou ukázku práce s knihovnou **anime.js**  
-a tvorby interaktivních animací pomocí funkce `anime()` v JavaScriptu.
+Tento projekt slouží jako praktická ukázka práce s knihovnou **anime.js** a tvorby interaktivních animací pomocí funkce `anime()` v JavaScriptu.
 
 Studenti si zde mohou vyzkoušet různé typy animací — změny pozice, velikosti, tvaru, barvy, průhlednosti, rotace, sekvenční animace pomocí timeline a mnoho dalšího.
 
@@ -78,4 +77,5 @@ Projekt je dostupný pod licencí MIT (viz soubor LICENSE).
 
 ## ✉️ Autor  
 **Jakub Březa (Vlk samotář)**
+
 [VlkSamotar.cz](https://vlksamotar.cz) | Informatika | Trading | Elektrotechnika
