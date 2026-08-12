@@ -1,0 +1,122 @@
+<!-- 
+======================================================================
+PROJEKT: INTERAKTIVNÍ LABORATOŘ ANIMACÍ – ANIME.JS PLAYGROUND
+Tvým úkolem je vytvořit interaktivní prvky, které reagují na uživatele
+pomocí knihovny anime.js a funkce anime().
+
+Cílem je pochopit:
+- jak anime.js pracuje s transformacemi
+- jak se tvoří komplexní animace
+- jak kombinovat více vlastností (translate, rotate, scale, opacity, colors)
+- jak řetězit animace a používat timeline
+
+Nepoužívej CSS @keyframes – vše řešíme čistě přes JavaScript.
+
+======================================================================
+
+🥉 ÚROVEŇ 1: Základní animace (translate, scale, opacity)
+----------------------------------------------------------------------
+1. Najdi prvek s class "box-basic".
+2. Po kliknutí na prvek spusť jednoduchou animaci:
+   - posun (translateX)
+   - zvětšení (scale)
+   - změna opacity
+Ukázka:
+anime({
+  targets: '.box-basic',
+  translateX: 150,
+  scale: 1.3,
+  opacity: 0.6,
+  duration: 800,
+  easing: 'easeOutQuad'
+});
+
+🥈 ÚROVEŇ 2: Pokročilé animace (rotate, borderRadius, loop)
+----------------------------------------------------------------------
+1. Najdi prvek s class "box-advanced".
+2. Po kliknutí vytvoř animaci, která:
+   - otočí prvek (rotate)
+   - změní tvar (borderRadius)
+   - použije loop nebo direction: 'alternate'
+Ukázka:
+anime({
+  targets: '.box-advanced',
+  rotate: '1turn',
+  borderRadius: ['10%', '50%'],
+  duration: 1200,
+  easing: 'easeInOutSine'
+});
+
+🥇 ÚROVEŇ 3: Mini galerie efektů (více prvků, různé animace)
+----------------------------------------------------------------------
+1. Najdi container s class "gallery".
+2. Vytvoř 4–6 kartiček (class "card").
+3. Každé kartičce při kliknutí nastav jinou animaci:
+   - jedna se otočí
+   - druhá se posune
+   - třetí změní barvu
+   - čtvrtá změní tvar
+   - pátá pulzuje (scale up/down)
+   - šestá se rozpadne (opacity → 0 + translate)
+Ukázka:
+anime({
+  targets: '.card:nth-child(3)',
+  backgroundColor: '#e94e77',
+  translateY: -20,
+  duration: 600
+});
+
+💎 BONUS PRO MISTRY:
+----------------------------------------------------------------------
+- Použij anime.timeline() pro sekvenční animace.
+- Vytvoř animaci, která reaguje na držení myši (mousedown + mouseup).
+- Vytvoř animaci, která se spustí při scrollování.
+- Přidej "laboratorní mód": po kliknutí na tlačítko se všem prvkům změní styl.
+- Vytvoř tooltip animovaný pomocí anime.js.
+- Vytvoř vlastní galerii efektů – každý prvek jiný typ animace.
+
+======================================================================
+Kódování zdar, laboratorní techniku!
+======================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime.js Laboratoř</title>
+
+    <!-- CDN knihovna anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Interaktivní laboratoř animací – Anime.js Playground</h1>
+
+        <h2>Základní box</h2>
+        <div class="box-basic">Basic</div>
+
+        <h2>Pokročilý box</h2>
+        <div class="box-advanced">Advanced</div>
+
+        <h2>Mini galerie efektů</h2>
+        <div class="gallery">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
